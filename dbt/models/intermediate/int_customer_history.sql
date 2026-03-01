@@ -1,0 +1,1 @@
+select customer_id, min(order_date) as first_order, count(order_id) as total_orders from {{ ref('stg_orders') }} group by 1

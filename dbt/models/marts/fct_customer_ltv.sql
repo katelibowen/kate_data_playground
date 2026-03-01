@@ -1,0 +1,1 @@
+select customer_id, sum(amount_usd) as ltv from {{ ref('int_orders_joined') }} group by 1

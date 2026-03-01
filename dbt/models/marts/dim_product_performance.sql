@@ -1,0 +1,1 @@
+select category, count(*) as sales_count from {{ ref('stg_products') }} group by 1

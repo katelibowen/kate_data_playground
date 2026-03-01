@@ -1,0 +1,1 @@
+select date_trunc('day', order_date) as date, sum(amount_usd) as revenue from {{ ref('int_orders_joined') }} group by 1

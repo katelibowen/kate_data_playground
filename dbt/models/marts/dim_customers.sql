@@ -1,0 +1,1 @@
+select c.*, h.first_order, h.total_orders from {{ ref('stg_customers') }} c left join {{ ref('int_customer_history') }} h on c.customer_id = h.customer_id
